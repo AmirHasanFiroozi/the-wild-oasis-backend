@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "server:dev": "cross-env NODE_ENV=development nodemon server.js",
-    "server:prod": "cross-env NODE_ENV=production nodemon server.js"
+    "server:prod": "cross-env NODE_ENV=production nodemon server.js",
+    "import" : "node Data/import-data-to-db.js --import",
+    "delete" : "node Data/import-data-to-db.js --delete"
   },
   "author": "Amir Hasan Firoozi",
   "license": "ISC",
@@ -19,7 +21,8 @@
     "helmet": "^8.1.0",
     "hpp": "^0.2.3",
     "mongoose": "^8.13.2",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "validator": "^13.15.0"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
