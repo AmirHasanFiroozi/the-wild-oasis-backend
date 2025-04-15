@@ -37,6 +37,10 @@ const cabinsSchema = new mongoose.Schema({
     trim: true,
     require: true,
   },
+  createAt : {
+    type : Date ,
+    default : Date.now(),
+  }
 });
 
 const Cabin = mongoose.model("cabins", cabinsSchema);

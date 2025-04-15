@@ -6,8 +6,8 @@
   "scripts": {
     "server:dev": "cross-env NODE_ENV=development nodemon server.js",
     "server:prod": "cross-env NODE_ENV=production nodemon server.js",
-    "import" : "node Data/import-data-to-db.js --import",
-    "delete" : "node Data/import-data-to-db.js --delete"
+    "import": "node Data/import-data-to-db.js --import",
+    "delete": "node Data/import-data-to-db.js --delete"
   },
   "author": "Amir Hasan Firoozi",
   "license": "ISC",
@@ -15,6 +15,14 @@
     "compression": "^1.8.0",
     "cookie-parser": "^1.4.7",
     "dotenv": "^16.5.0",
+    "eslint": "^8.57.1",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^5.2.6",
+    "eslint-plugin-react": "^7.37.5",
     "express": "^5.1.0",
     "express-mongo-sanitize": "^2.2.0",
     "express-rate-limit": "^7.5.0",

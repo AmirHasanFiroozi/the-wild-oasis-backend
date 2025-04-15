@@ -8,6 +8,7 @@ const guestSchema = new mongoose.Schema({
     maxlength: [30, "the fullName is really long"],
     required: true,
     trim: true,
+    set: (val) => val.toLowerCase(),
   },
   email: {
     type: String,
@@ -30,9 +31,12 @@ const guestSchema = new mongoose.Schema({
     required: true,
   },
   countryFlag: String,
+  createAt: {
+    type: Date,
+    default: Date.now(),
+  },
 });
 
+const Guest = mongoose.model("guests", guestSchema);
 
-const Guest = mongoose.model('guests' , guestSchema);
-
-module.exports = Guest ;
+module.exports = Guest;
