@@ -3,6 +3,7 @@ class APIFeature {
     this.query = query;
     this.items = items;
   }
+
   Filter() {
     // 1) we shouldn't have fields ( 'page' , 'limit' , 'fields' , 'sort' ) in this function
     const queryCopy = { ...this.query };
@@ -19,6 +20,7 @@ class APIFeature {
 
     return this;
   }
+
   Search(field) {
     if (this.query.q && field) {
       console.log(this.query.q);
@@ -28,6 +30,7 @@ class APIFeature {
     }
     return this;
   }
+
   Sort() {
     if (this.query.sort) {
       const sortItems = this.query.sort.replaceAll(",", " ");
@@ -35,18 +38,20 @@ class APIFeature {
     }
     return this;
   }
+
   FieldLimit() {
-    if(this.query.fields){
-        const fieldsItems = this.query.fields.replaceAll("," , " ");
-        this.items = this.items.select(fieldsItems);
-    }else{
-        this.items = this.items.select('-__v');
+    if (this.query.fields) {
+      const fieldsItems = this.query.fields.replaceAll(",", " ");
+      this.items = this.items.select(fieldsItems);
+    } else {
+      this.items = this.items.select("-__v");
     }
-    return this ;
+    return this;
   }
+
   Pagination() {
-    const {page = 1 , limit } = this.query ;
-    const skip = (page -1) * limit ;
+    const { page = 1, limit } = this.query;
+    const skip = (page - 1) * limit;
     this.items = this.items.skip(skip).limit(limit);
   }
 }

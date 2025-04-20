@@ -1,8 +1,22 @@
 const express = require("express");
-const { getAllGuests } = require("../Controller/guestsController");
+const {
+  getAllGuests,
+  getOneGuest,
+  deleteOneGuest,
+  updateOneGuest,
+  createOneGuest,
+} = require("../Controller/guestsController");
+const { protect } = require("../Controller/authController");
 
 const router = express.Router();
 
-router.route('/').get(getAllGuests);
+router.use(protect);
 
-module.exports = router ;
+router.route("/").get(getAllGuests).post(createOneGuest);
+router
+  .route("/:id")
+  .get(getOneGuest)
+  .delete(deleteOneGuest)
+  .patch(updateOneGuest);
+
+module.exports = router;

@@ -1,0 +1,62 @@
+[
+  {
+    "fullName": "Alice Smith",
+    "workNumber": "454847584854585258",
+    "username": "alice_smith",
+    "password": "SecurePass$#12"
+  },
+  {
+    "fullName": "Bob Johnson",
+    "workNumber": "454847584851247895",
+    "username": "bob_johnson",
+    "password": "SecurePass$#12"
+  },
+  {
+    "fullName": "Charlie Brown",
+    "workNumber": "454847584857586324",
+    "username": "charlie_brown",
+    "password": "SecurePass$#12"
+  },
+  {
+    "fullName": "David White",
+    "workNumber": "454847584854569632",
+    "username": "david_white",
+    "password": "SecurePass$#12"
+  },
+  {
+    "fullName": "Emma Harris",
+    "workNumber": "454847584857878452",
+    "username": "emma_harris",
+    "password": "SecurePass$#12"
+  },
+  {
+    "fullName": "Frank Miller",
+    "workNumber": "454847584852322254",
+    "username": "frank_miller",
+    "password": "SecurePass$#12"
+  },
+  {
+    "fullName": "Grace Lee",
+    "workNumber": "454847584854560120",
+    "username": "grace_lee",
+    "password": "SecurePass$#12"
+  },
+  {
+    "fullName": "Henry Wilson",
+    "workNumber": "454847584854579980",
+    "username": "henry_wilson",
+    "password": "SecurePass$#12"
+  },
+  {
+    "fullName": "Isabella Martinez",
+    "workNumber": "454847584850022333",
+    "username": "isabella_martinez",
+    "password": "SecurePass$#12"
+  },
+  {
+    "fullName": "Jack Thomas",
+    "workNumber": "454847584854578785",
+    "username": "jack_thomas",
+    "password": "SecurePass$#120"
+  }
+]

@@ -1,8 +1,22 @@
 const express = require("express");
-const { getAllCabins, searchCabins } = require("../Controller/cabinsController");
+const {
+  getAllCabins,
+  getOneCabin,
+  updateOneCabin,
+  deleteOneCabin,
+  createOneCabin,
+} = require("../Controller/cabinsController");
+const { protect } = require("../Controller/authController");
 
 const router = express.Router();
 
-router.route('/').get(getAllCabins);
+router.use(protect);
 
-module.exports = router ;
+router.route("/").get(getAllCabins).post(createOneCabin);
+router
+  .route("/:id")
+  .get(getOneCabin)
+  .patch(updateOneCabin)
+  .delete(deleteOneCabin);
+
+module.exports = router;
